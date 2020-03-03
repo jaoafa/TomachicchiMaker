@@ -31,7 +31,7 @@ function reset() {
 }
 
 function downloadPNG() {
-    var svg = document.querySelector("svg");
+    var svg = document.getElementById("img");
     var svgData = new XMLSerializer().serializeToString(svg);
     var canvas = document.createElement("canvas");
     canvas.width = svg.width.baseVal.value;
