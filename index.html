@@ -5,34 +5,26 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>とまちっちめいかー</title>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-        <script src="script.js"></script>
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
         <h1>とまちっちめーかー</h1>
         <main>
             <div id="left">トマト: <input type="color" class="color_buttons" id="tomato_color" data-pathid="tomato"
-                    onchange="changeTomachi(this)" onkeyup="changeTomachi(this)" value="#e74c3c"
-                    data-defaultval="#e74c3c"><br class="sp_br" /><span class="sp_br"></span>
-                チーズ: <input type="color" class="color_buttons" id="cheese_color" data-pathid="cheese"
-                    onchange="changeTomachi(this)" onkeyup="changeTomachi(this)" value="#f1c40f"
+                    value="#e74c3c" data-defaultval="#e74c3c"><br class="sp_br" /><span class="sp_br"></span>
+                チーズ: <input type="color" class="color_buttons" id="cheese_color" data-pathid="cheese" value="#f1c40f"
                     data-defaultval="#f1c40f"><br />
-                左目: <input type="color" class="color_buttons" id="lefteye_color" data-pathid="lefteye"
-                    onchange="changeTomachi(this)" onkeyup="changeTomachi(this)" value="#36393f"
+                左目: <input type="color" class="color_buttons" id="lefteye_color" data-pathid="lefteye" value="#36393f"
                     data-defaultval="#36393f"><br class="sp_br" /><span class="sp_br"></span>
                 左目 白部分: <input type="color" class="color_buttons" id="leftwhite_color" data-pathid="leftwhite"
-                    onchange="changeTomachi(this)" onkeyup="changeTomachi(this)" value="#ffffff"
-                    data-defaultval="#ffffff"><br />
-                右目: <input type="color" class="color_buttons" id="righteye_color" data-pathid="righteye"
-                    onchange="changeTomachi(this)" onkeyup="changeTomachi(this)" value="#36393f"
+                    value="#ffffff" data-defaultval="#ffffff"><br />
+                右目: <input type="color" class="color_buttons" id="righteye_color" data-pathid="righteye" value="#36393f"
                     data-defaultval="#36393f"><br class="sp_br" /><span class="sp_br"></span>
                 右目 白部分: <input type="color" class="color_buttons" id="rightwhite_color" data-pathid="rightwhite"
-                    onchange="changeTomachi(this)" onkeyup="changeTomachi(this)" value="#ffffff"
-                    data-defaultval="#ffffff"><br />
-                口: <input type="color" class="color_buttons" id="mouth_color" data-pathid="mouth"
-                    onchange="changeTomachi(this)" onkeyup="changeTomachi(this)" value="#36393f"
+                    value="#ffffff" data-defaultval="#ffffff"><br />
+                口: <input type="color" class="color_buttons" id="mouth_color" data-pathid="mouth" value="#36393f"
                     data-defaultval="#36393f"><br />
-                <input type="button" onclick="reset()" value="Reset Color">
+                <input type="button" id="resetButton" value="Reset Color">
                 <hr />
                 上記で色を選ぶと、該当する箇所の色が変わります。<br />
                 「Reset Color」を押すとすべての選択を初期設定に戻します。<br />
@@ -59,5 +51,6 @@
                 </svg>
             </div>
         </main>
+        <script src="script.js"></script>
     </body>
 </html>
