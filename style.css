@@ -1,0 +1,92 @@
+html,
+body,
+main {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+svg {
+    width: 100%;
+    height: 100%;
+}
+
+#tomato {
+    fill: #e74c3c;
+}
+
+#cheese {
+    fill: #f1c40f;
+}
+
+#lefteye {
+    fill: #36393f;
+}
+
+#righteye {
+    fill: #36393f;
+}
+
+#mouth {
+    fill: #36393f;
+}
+
+#leftwhite {
+    fill: #fff;
+}
+
+#rightwhite {
+    fill: #fff;
+}
+
+
+h1 {
+    height: 5%;
+    text-align: center;
+    color: #e74c3c;
+}
+
+@media only screen and (min-width:548px) {
+
+    html,
+    body,
+    main {
+        position: fixed;
+    }
+
+    main {
+        height: 87%;
+    }
+
+    #left {
+        top: 30%;
+        float: left;
+        width: 45%;
+        height: 87%;
+        margin-left: 15px;
+        vertical-align: middle;
+        position: absolute;
+    }
+
+    #right {
+        float: right;
+        width: 50%;
+        height: 100%;
+    }
+
+    hr {
+        margin: 20px 0;
+    }
+}
+
+@media only screen and (max-width:548px) {
+    br.sp_br {
+        display: none;
+    }
+
+    span.sp_br::after {
+        content: "・";
+        margin: 0 0.5em;
+    }
+}

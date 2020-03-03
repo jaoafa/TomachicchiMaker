@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>とまちっちめいかー</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="script.js"></script>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <h1>とまちっちめーかー</h1>
+        <main>
+            <div id="left">トマト: <input type="color" class="color_buttons" id="tomato_color" data-pathid="tomato"
+                    onchange="changeTomachi(this)" onkeyup="changeTomachi(this)" value="#e74c3c"
+                    data-defaultval="#e74c3c"><br class="sp_br" /><span class="sp_br"></span>
+                チーズ: <input type="color" class="color_buttons" id="cheese_color" data-pathid="cheese"
+                    onchange="changeTomachi(this)" onkeyup="changeTomachi(this)" value="#f1c40f"
+                    data-defaultval="#f1c40f"><br />
+                左目: <input type="color" class="color_buttons" id="lefteye_color" data-pathid="lefteye"
+                    onchange="changeTomachi(this)" onkeyup="changeTomachi(this)" value="#36393f"
+                    data-defaultval="#36393f"><br class="sp_br" /><span class="sp_br"></span>
+                左目 白部分: <input type="color" class="color_buttons" id="leftwhite_color" data-pathid="leftwhite"
+                    onchange="changeTomachi(this)" onkeyup="changeTomachi(this)" value="#ffffff"
+                    data-defaultval="#ffffff"><br />
+                右目: <input type="color" class="color_buttons" id="righteye_color" data-pathid="righteye"
+                    onchange="changeTomachi(this)" onkeyup="changeTomachi(this)" value="#36393f"
+                    data-defaultval="#36393f"><br class="sp_br" /><span class="sp_br"></span>
+                右目 白部分: <input type="color" class="color_buttons" id="rightwhite_color" data-pathid="rightwhite"
+                    onchange="changeTomachi(this)" onkeyup="changeTomachi(this)" value="#ffffff"
+                    data-defaultval="#ffffff"><br />
+                口: <input type="color" class="color_buttons" id="mouth_color" data-pathid="mouth"
+                    onchange="changeTomachi(this)" onkeyup="changeTomachi(this)" value="#36393f"
+                    data-defaultval="#36393f"><br />
+                <input type="button" onclick="reset()" value="Reset Color">
+                <hr />
+                上記で色を選ぶと、該当する箇所の色が変わります。<br />
+                「Reset Color」を押すとすべての選択を初期設定に戻します。<br />
+                作成した画像は<a
+                    href="https://github.com/jaoafa/TomachicchiMaker/blob/master/README.md">README.md</a>で記載している用途のみに利用してください。
+                </p>
+            </div>
+            <div id="right">
+                <svg viewBox="0 0 430.7 435.2">
+                    <path id="tomato"
+                        d="M219.6,0,183.8,33c-19.9,18.4-38.9,38.2-61.3,53.6L119,89c-15.6,10.9-43.9,25.7-62.7,43C21.9,163.7,0,204.6,0,255,0,364.6,116.2,436.4,216.4,435.2c38.9-.5,91.5-11,136.9-42.6,41.8-29.1,77-73.6,77.4-136.2,0-34.7-9.2-65.7-28.4-92-20.9-28.9-52-51.3-52-51.3Z" />
+                    <path id="cheese"
+                        d="M219.6,0,177,39.3c-1.6,1.5-2.3,6.2-2.9,8.2a137.1,137.1,0,0,0-5.2,21c-3.3,19-2.9,39.7,6.1,57.2,12.8,24.8,41.6,37,68.3,39.2,31.9,2.6,67.4-12.8,90.5-34.4,5.7-5.4,11.5-11.4,15.5-18.3Z" />
+                    <path id="lefteye"
+                        d="M108,140.9c-24.1.4-39.7,21.8-45.1,43.4s1.8,51.7,22,64.3c12.4,7.8,28.8,6.9,41.3,0s19.9-18.4,23.7-31.2c0-.2.1-.3.1-.4,6.5-22.6,2.7-53.7-17.5-68.4a40,40,0,0,0-24.1-7.7Z" />
+                    <path id="leftwhite"
+                        d="M113.8,157.8a17.9,17.9,0,0,0-11.5,4.3c-5.3,4.5-8.6,11-10.7,17.5-.3.8-.5,1.7-.8,2.5-3.6,13.5,1,31,13.2,38.7,13.8,8.8,27.1-5.4,31.4-17.6a53.5,53.5,0,0,0,1.7-6.9c1.9-12.4-2.7-29.7-14.4-36.3A16.8,16.8,0,0,0,113.8,157.8Z" />
+                    <path id="righteye"
+                        d="M336.3,147.9a41.7,41.7,0,0,0-19.9,4.7c-11.8,6.3-19.5,18-23.5,30.5-.4,1.2-.7,2.4-1,3.6-6.1,23.2-.5,53.9,20.8,68.3,12.1,8.1,28.4,7.7,40.7.4s19-18.8,23.2-31.2l.9-3.1c6.5-22.4-.5-52.1-20.1-66.4A36.3,36.3,0,0,0,336.3,147.9Z" />
+                    <path id="rightwhite"
+                        d="M327.7,164.7a18.5,18.5,0,0,0-11.5,4.4c-5.3,4.4-8.6,11-10.7,17.4-.3.9-.6,1.8-.8,2.6-3.6,13.4,1,31,13.2,38.7,13.8,8.8,27.1-5.4,31.3-17.6a34.8,34.8,0,0,0,1.7-6.9c2-12.4-2.6-29.7-14.3-36.3A17.9,17.9,0,0,0,327.7,164.7Z" />
+                    <path id="mouth"
+                        d="M164.7,249.1s-55.6,26-15.2,64.5c44.3,28.5,68.3-12.8,68.3-12.8s24.4,49.5,71.1,14.4c37.1-43.3-21.6-63.5-21.6-63.5s51.1,37.8-5.2,60.6c-28.9,5.4-42.9-37.9-42.9-37.9s-15.9,52.7-57,28.8C126.9,280.4,164.7,249.1,164.7,249.1Z" />
+                </svg>
+            </div>
+        </main>
+    </body>
+</html>
