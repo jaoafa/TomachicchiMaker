@@ -84,16 +84,18 @@
                     value="#ffffff" data-defaultval="#ffffff"><br />
                 口: <input type="color" class="color_buttons" id="mouth_color" data-pathid="mouth" value="#36393f"
                     data-defaultval="#36393f"><br />
-                <input type="button" id="resetButton" value="Reset Color"> <input type="button" id="downloadButton" value="Download">
+                <input type="button" id="resetButton" value="Reset Color"> <input type="button" id="downloadPNGButton"
+                    value="DownloadPNG"> <input type="button" id="downloadSVGButton" value="DownloadSVG">
                 <hr />
                 上記で色を選ぶと、該当する箇所の色が変わります。<br />
                 「Reset Color」を押すとすべての選択を初期設定に戻します。<br />
+                「PNG」もしくは「SVG」の形式でダウンロードできます。サイズは500x500固定です。<br />
                 作成した画像は<a
                     href="https://github.com/jaoafa/TomachicchiMaker/blob/master/README.md">README.md</a>で記載している用途のみに利用してください。
                 </p>
             </div>
             <div id="right">
-                <svg viewBox="0 0 430.7 435.2" id="img">
+                <svg viewBox="0 0 430.7 435.2" id="img" width="500px" height="500px">
                     <path id="tomato"
                         d="M219.6,0,183.8,33c-19.9,18.4-38.9,38.2-61.3,53.6L119,89c-15.6,10.9-43.9,25.7-62.7,43C21.9,163.7,0,204.6,0,255,0,364.6,116.2,436.4,216.4,435.2c38.9-.5,91.5-11,136.9-42.6,41.8-29.1,77-73.6,77.4-136.2,0-34.7-9.2-65.7-28.4-92-20.9-28.9-52-51.3-52-51.3Z" />
                     <path id="cheese"
@@ -111,6 +113,7 @@
                 </svg>
             </div>
         </main>
-        <script src="script.js"></script>
+        <script src="js/script.js"></script>
+        <script src="js/download.js"></script>
     </body>
 </html>
